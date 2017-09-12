@@ -1,0 +1,48 @@
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input, li, ol, p, pre, td, textarea, th, ul{
+	margin:0;
+	padding:0;
+}
+
+html,body{
+	font-size:14px;
+	line-height: 1.5;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+.header{
+	position: relative;
+}
+
+.header-bar{
+	height: 80px;
+	border:1px solid #ccc;
+	position: relative;
+	margin:0 30px;
+	top:0;
+}
+
+.header-bar .logo{
+	float:left;
+	width:214px;
+	height: 69px;
+	text-align: center;
+	line-height: 69px;
+}
+
+.content{
+	height: 100%;
+	padding:80px 0px 65px 0px;
+	border:1px solid blue;
+}
+
+.musicBar{
+	position: fixed;
+	bottom: 0px;
+	height: 65px;
+	width:100%;
+	background-color: rgba(178,177,157,0.5);
+}

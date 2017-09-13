@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1452478224_5163229.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1452478224_5163229.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1452478224_5163229.woff') format('woff'), /* chrome、firefox */
+  url('http:/at.alicdn.com/t/font_1452478224_5163229.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1452478224_5163229.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                                                                                                    
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input, li, ol, p, pre, td, textarea, th, ul{
 	margin:0;
 	padding:0;
@@ -6,11 +23,18 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
 html,body{
 	font-size:14px;
 	line-height: 1.5;
+	height:100%;
+	overflow: hidden;
+	font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;
 }
 
 a{
 	text-decoration: none;
 	color: #333;
+}
+
+div{
+	/*border:1px solid black;*/
 }
 
 .header{
@@ -19,7 +43,7 @@ a{
 
 .header-bar{
 	height: 80px;
-	border:1px solid #ccc;
+	/*border:1px solid #ccc;*/
 	position: relative;
 	margin:0 30px;
 	top:0;
@@ -34,15 +58,329 @@ a{
 }
 
 .content{
+	position: relative;
+	max-width: 1024px;
 	height: 100%;
-	padding:80px 0px 65px 0px;
-	border:1px solid blue;
+	padding:0 30px;
+	/*padding:80px 0px 65px 0px;*/
+	/*margin-bottom: 65px;*/
+	/*border:1px solid blue;*/
+}
+
+.content .musicImg{
+	position: absolute;
+	width:200px;
+	height: 200px;
+	right: 30px;
+	top:50px;
+	/*top:-180px;*/
+	/*margin-top:50%;*/
+	border-radius:50%;
+	background: #fff url("../img/成都成都.jpeg") no-repeat;
+	background-size:200px 200px;
+
+}
+
+.content .lyric{
+	width:500px;
+	height: 450px;
+	padding:50px 0 0 0;
+	float:right;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 230px;
+	overflow: hidden;
+	font-size:16px;
+	color:#333;
 }
 
 .musicBar{
 	position: fixed;
 	bottom: 0px;
-	height: 65px;
+	height: 50px;
 	width:100%;
-	background-color: rgba(178,177,157,0.5);
+	/*background-color: rgba(178,177,157,0.5);*/
+}
+
+/*音乐模块样式*/
+.music-title{
+	height: 36px;
+	line-height: 36px;
+	/*border-bottom:1px solid #ccc;*/
+	color:#aaa;
+	padding-left:72px;
+	padding-right: 0px;
+	font-size: 14px;
+}
+
+.music-row-item{
+	float:left;
+	width:25%;
+	font-size:14px;
+}
+
+.music-item{
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	border-bottom: 1px solid #eee;
+}
+
+.music-item:hover{
+	background-color: rgba(240,240,240,0.5);
+}
+
+.music-row-item.music-sort{
+	font-family: Arial;
+	width:72px;
+	text-align: center;
+	color:#aaa;
+	position: absolute;
+	top:0;
+	left:0;
+
+}
+
+.ui-playing{
+	background: url("http://gtms01.alicdn.com/tps/i1/T1X4JEFq8qXXXaYEA_-11-12.gif") no-repeat 50% 50%;
+	font-size: 0;
+}
+
+.music-main-content{
+	padding-left:72px;
+	padding-right: 0px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.music-main-content>.music-row-item{
+	height: 40px;
+	overflow: hidden;
+}
+
+.music-controller{
+	position: fixed;
+	background-color: rgba(178,177,157,0.5);/*rgba(211,209,188,0.5);*/
+	bottom:0;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	/*display: none;*/
+}
+
+
+.controller-wrap{
+	padding-left:278px;
+	padding-right: 240px;
+	height: 100%;
+}
+
+.player-control{
+	width:218px;
+	padding:0 30px;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	vertical-align: middle;
+}
+
+.player-control>a{
+	float:left;
+	width:54.5px;
+	text-align: center;
+	/*padding-right: 20px;*/
+}
+
+.player-controll-btn>.iconfont{
+	color:#fff;
+	font-size: 23px;
+
+}
+
+/*.player-controll-btn>.iconfont.icon-pause{
+	transform: translate(2,2);
+}
+*/
+
+.player-controll-btn.player-play-pause-Btn>.iconfont{
+	/*display: none;*/
+}
+
+.player-controll-btn.player-play-pause-Btn>.iconfont.active{
+	/*display: inline;*/
+}
+
+.song-info{
+	height: 100%;
+	position: relative;
+	line-height: 35px;
+}
+
+.song-info-content{
+	font-size: 14px;
+	color:#fff;
+	height: 18px;
+	line-height: 18px;
+	margin-top:8px;
+	/*margin-top:10px;*/
+}
+
+.song-time{
+	font-size: 12px;
+	color:#777;
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+	/*display: none;*/
+}
+
+.player-position-time{
+	position: absolute;
+	left:0;
+	top:0;
+}
+
+.total-time{
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+.player-progress{
+	position: absolute;
+	top:0px;
+	left:40px;
+	right: 40px;
+	height: 20px;
+	line-height: 35px;
+}
+
+.player-progress:hover{
+	cursor:pointer;
+}
+
+.loading{
+	display: block;
+	background-color: #999;
+	width: 0%;
+	height: 3px;
+	/*line-height: 35px;*/
+	border-radius: 1px;
+	position: absolute;
+	top:9px;
+	left:0;
+}
+
+.playing{
+	display: block;
+	background-color: #fff;
+	width: 0%;
+	height: 3px;
+	/*line-height: 35px;*/
+	border-radius: 1px;
+	position: absolute;
+	top:9px;
+	left:0;
+}
+
+.progress-dot{
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	top:-8px;
+	left:0%;
+	margin-left:-15.5px;
+	color:#fff;
+}
+
+.progress-dot>.iconfont{
+	font-size: 35px;
+	color: #fff;
+}
+
+.player-volume{
+
+	width: 130px;
+	height: 100%;
+	line-height: 58px;
+	padding:0 50px 0 40px;
+	position: absolute;
+	top:0;
+	right:0;
+	/*border:1px solid green;*/
+
+}
+
+.horn-box{
+	float:left;
+	width:40px;
+	height: 100%;
+	text-align: center;
+}
+
+.horn{
+	float:left;
+	width:40px;
+	/*border:1px solid red;*/
+	/*text-align: center;*/
+}
+
+.horn>.iconfont{
+	font-size: 25px;
+	color:#fff;
+}
+
+.volume-progress{
+	position: absolute;
+	top:0px;
+	left:80px;
+	width:100px;
+	height: 100%;
+	line-height: 50px;
+	/*border:1px solid blue;*/
+}
+
+.max{	
+	display: block;
+	background-color: #999;
+	width: 100%;
+	height: 3px;
+	margin-top:25px;
+	line-height: 50px;
+	border-radius: 1px;
+}
+
+.current{
+	display: block;
+	background-color: #fff;
+	width: 80%;
+	height: 3px;
+	margin-top:25px;
+	line-height: 50px;
+	border-radius: 1px;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.volume-dot{
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	top:-17px;
+	left:80%;
+	margin-top:25px;
+	margin-left:-17.5px;
+	color:#fff;
+
+}
+
+.volume-dot>.iconfont{
+	font-size: 35px;
+	color: #fff;
 }

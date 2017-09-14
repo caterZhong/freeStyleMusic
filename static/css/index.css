@@ -204,11 +204,11 @@ div{
 */
 
 .player-controll-btn.player-play-pause-Btn>.iconfont{
-	/*display: none;*/
+	display: none;
 }
 
 .player-controll-btn.player-play-pause-Btn>.iconfont.active{
-	/*display: inline;*/
+	display: inline;
 }
 
 .song-info{
